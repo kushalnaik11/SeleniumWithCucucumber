@@ -70,7 +70,7 @@ public class Main {
         devTools.send(emulateNetworkConditions(true, 100, 1000, 2000,
                 Optional.of(ConnectionType.cellular3g)));
 
-        devTools.addListener(loadingFailed(), loadingFailed -> assertEquals(loadingFailed.getErrorText(), "net::ERR_INTERNET_DISCONNECTED"));
+        devTools.addListener(loadingFailed(), loadingFailed -> {assertEquals(loadingFailed.getErrorText()}, "net::ERR_INTERNET_DISCONNECTED"));
     }
 
     /**
